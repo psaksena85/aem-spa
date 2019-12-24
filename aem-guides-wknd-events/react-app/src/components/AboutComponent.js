@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import BusinessBanner from "./BusinessBanner";
-import { ModelManager, Constants } from "@adobe/cq-spa-page-model-manager";
+import { ModelManager } from "@adobe/cq-spa-page-model-manager";
 
 class AboutComponent extends Component {
     state = {
@@ -18,23 +18,10 @@ class AboutComponent extends Component {
     }
 
     render() {
-        // console.log(ModelManager.getData());
+        console.log('In [About.js]')
         return (
             <React.Fragment>
-                <h1 className="py-5 mb-5">About Page</h1>
-                {/* <BusinessBanner 
-                    displayMessage = { ModelManager.modelStore._findItemData("root/responsivegrid/businessbanner").data.displayMessage }
-                    text = { ModelManager.modelStore._findItemData("root/responsivegrid/businessbanner").data.text }
-                    cqPath={"/content/wknd-events/react/about/jcr:content/root/responsivegrid/businessbanner"}/> */}
-                {/* <BusinessBanner 
-                    displayMessage = { ModelManager.modelStore._findItemData("/content/wknd-events/react/about/jcr:content/root/responsivegrid/businessbanner").data.displayMessage }
-                    text = { ModelManager.modelStore._findItemData("/content/wknd-events/react/about/jcr:content/root/responsivegrid/businessbanner").data.text }
-                    cqPath={"/content/wknd-events/react/about/jcr:content/root/responsivegrid/businessbanner"}/> */}
-                {/* <BusinessBanner 
-                    displayMessage = {ModelManager.modelStore._data[':children']['/content/wknd-events/react/about'][':items']['root'][':items']['responsivegrid'][':items']['businessbanner']['displayMessage']}
-                    text={ModelManager.modelStore._data[':children']['/content/wknd-events/react/about'][':items']['root'][':items']['responsivegrid'][':items']['businessbanner']['text']}
-                    cqPath={"/content/wknd-events/react/about/jcr:content/root/responsivegrid/businessbanner"}/> */}
-                <BusinessBanner 
+                <BusinessBanner className="py-5 mb-5"
                     displayMessage = {this.state.displayMessage}
                     text = {this.state.text}
                     cqPath={"/content/wknd-events/react/about/jcr:content/root/responsivegrid/businessbanner"}/>

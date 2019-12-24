@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import BusinessBanner from "./BusinessBanner";
 import BusinessOverview from "./BusinessOverview";
 import ContactUs from "./ContactUs";
 import CardTile from "./CardTile";
